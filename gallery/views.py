@@ -22,4 +22,8 @@ def search_gallery(request):
        else:
         message = "You haven't searched for anything"
         return render(request, 'search.html',{'message':message})
-        
+
+    def view_by_location(request, location):
+      locations = Image.filter_by_location(location)
+      message = location
+        return render(request,'location.html',{"image": location, 'message':location})       
