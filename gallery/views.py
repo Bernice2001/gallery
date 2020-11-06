@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http  import HttpResponse
+from django.http  import HttpResponse, Http404
 from .models import image
 # Create your views here.
 def welcome(request):
@@ -7,7 +7,7 @@ def welcome(request):
 
 def main(request):
     context={
-        'galleries'Gallery.objects.all()
+     'galleries' gallery.objects.all()
     }
     return render(request, 'galleries/index.html' ,context)
 
