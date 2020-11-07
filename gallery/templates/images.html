@@ -1,5 +1,22 @@
 {% include 'base.html' %}
 {% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark purple-gradient-rgba">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'addPage' %}">Add Image <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Location</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 <div class="container">
         
@@ -21,10 +38,8 @@
                 <h4>Caption: {{image.description}}</h4>
                 
                 <h4>Location: {{image.location}}</h4>
-
-                
+               
                 <br><br><br>
-                <h4>Link to this Image:<span><input id="myInput" type="text" value="https://photo-gallery-wesh.herokuapp.com/image/{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></h4>
             </div>
         </div>
 
