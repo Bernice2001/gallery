@@ -1,0 +1,52 @@
+body{
+    background-color: grey;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  /* Float four columns side by side */
+
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+.dropdown-item:hover{
+    background-color: rgb(91, 20, 105);
+    color: black;
+}
+  
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-fluid{
+  width:  300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .img-fluid{
+    width: 200px;
+    height: 200px;
+  }
+  #images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  
+}
