@@ -8,8 +8,7 @@ urlpatterns=[
     url('search/', views.search_images, name='searchPage'), 
     url('upload/', views.add_image, name='addPage'), 
     url('location/<location>/', views.view_by_location, name='location'), 
-
-
+    
 ]
 
 if settings.DEBUG:
