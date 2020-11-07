@@ -21,4 +21,15 @@ def search_images(request):
 def view_by_location(request, location):
     locations = Image.filter_by_location(location)
     message = location
-    return render(request,'location.html',{"image": location, 'message':location})       
+    return render(request,'location.html',{"image": location, 'message':location}) 
+
+def add_image(request):
+    if request.method == "POST":
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+        else:
+            return False
+    
+    return render(request, 'form.html', {'form':ImageForm,})          
