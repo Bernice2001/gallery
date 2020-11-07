@@ -1,13 +1,10 @@
 from django.shortcuts import render
 from django.http  import HttpResponse, Http404
 from .models import *
-# Create your views here.
-def welcome(request):
-    return HttpResponse('Welcome to the Gallery shop')
 
 def main(request):
-    gallery = gallery.objects.all()
-    return render(request, 'galleries/index.html' ,{'gallery':gallery})
+    gallery = Image.objects.all()
+    return render(request, 'images.html' ,{'gallery':gallery})
 
 def search_images(request):
     if 'gallery' in request.GET and request.GET["gallery"]:
