@@ -7,9 +7,3 @@ class ImageForm(forms.ModelForm):
         model = Image
         fields = '__all__'
 
-class ImagesForm(forms.Form):
-    image = forms.ImageField(required=True) 
-    imagename = forms.CharField(required=True)
-    description = forms.CharField(required=True)
-    locaton = forms.CharField(required=True)
-    category = forms.ChoiceField(choices=CATEGORIES, required=True)
